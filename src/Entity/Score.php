@@ -23,6 +23,10 @@ class Score
     #[ORM\Column]
     private ?int $gameTime = null;
 
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?User $patient = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -60,6 +64,18 @@ class Score
     public function setGameTime(int $gameTime): static
     {
         $this->gameTime = $gameTime;
+
+        return $this;
+    }
+
+    public function getPatient(): ?User
+    {
+        return $this->patient;
+    }
+
+    public function setPatient(?User $patient): static
+    {
+        $this->patient = $patient;
 
         return $this;
     }
