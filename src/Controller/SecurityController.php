@@ -23,7 +23,7 @@ class SecurityController extends AbstractController
         ]);
     }
 
-    #[Route('/logout', name: 'app_logout')]
+    #[Route('/login', name: 'app_logout')]
     public function logout(): void
     {
         // Cette méthode peut rester vide car elle sera interceptée par la configuration du pare-feu pour la déconnexion
