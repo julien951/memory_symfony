@@ -1,19 +1,83 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
-
 {% block body %}
     <h1>Register</h1>
 
-    {{ form_errors(registrationForm) }}
-
     {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
-
-        <button type="submit" class="btn">Register</button>
+        {{ form_widget(registrationForm) }}
+        <button class="btn">Register</button>
     {{ form_end(registrationForm) }}
+
+    <h2>Liste des utilisateurs</h2>
+
+    <table>
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Pseudo</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for user in users %}
+        <tr id="user-{{ user.id }}">
+            <td>{{ user.email }}</td>
+            <td>{{ user.pseudo }}</td>
+            <td>
+                <!-- Bouton Modifier -->
+                <button onclick="editUser({{ user.id }})">Modifier</button>
+
+                <!-- Formulaire pour Supprimer un utilisateur -->
+                <form action="{{ path('user_delete', {id: user.id}) }}" method="post" style="display:inline-block;">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete_user') }}">
+                    <button type="submit">Supprimer</button>
+                </form>
+            </td>
+        </tr>
+
+        <!-- Ligne de modification masquée par défaut -->
+        <tr id="edit-user-{{ user.id }}" style="display:none;">
+            <td><input type="text" id="email-{{ user.id }}" value="{{ user.email }}"></td>
+            <td><input type="text" id="pseudo-{{ user.id }}" value="{{ user.pseudo }}"></td>
+            <td>
+                <button onclick="saveUser({{ user.id }})">Enregistrer</button>
+                <button onclick="cancelEdit({{ user.id }})">Annuler</button>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    function editUser(userId) {
+        document.getElementById('user-' + userId).style.display = 'none';
+        document.getElementById('edit-user-' + userId).style.display = '';
+    }
+
+    function cancelEdit(userId) {
+        document.getElementById('edit-user-' + userId).style.display = 'none';
+        document.getElementById('user-' + userId).style.display = '';
+    }
+
+    function saveUser(userId) {
+        const email = document.getElementById('email-' + userId).value;
+        const pseudo = document.getElementById('pseudo-' + userId).value;
+
+        fetch('/user/update/' + userId, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token('update_user') }}'
+            },
+            body: JSON.stringify({email: email, pseudo: pseudo})
+        }).then(response => {
+            if (response.ok) {
+                location.reload();
+            } else {
+                alert('Erreur lors de la mise à jour');
+            }
+        });
+    }
+</script>
+
 {% endblock %}
