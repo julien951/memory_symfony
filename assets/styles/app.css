@@ -1,3 +1,912 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: skyblue;
+    background: skyblue;
+    font-family: "Poppins", sans-serif;
+}
+
+.connexion {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.theme {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.theme_title {
+    display: flex;
+    justify-content: center;
+}
+
+.defiend_perso_block {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    align-items: center;
+}
+
+.defiend_perso_block h2 {
+    padding-bottom: 10px;
+}
+
+.defiened_theme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.defiened_theme button {
+    border: none;
+    border-radius: 3px;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form #theme_text {
+    padding: 3px 30px;
+    margin-bottom: -25px;
+}
+
+form #submit {
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.levelDifficult {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.diff_title {
+    display: flex;
+    justify-content: center;
+}
+
+.diff_block {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.diff_block {
+    display: flex;
+    gap: 30px;
+}
+
+.diff_block button {
+    border: none;
+    border-radius: 3px;
+    padding: 10px 30px;
+} */
+
+#mainAccueil{
+    width: 75%;
+    margin: 0 auto 7em;
+}
+#mainAccueil p:not(h5+p), #headerAccueil p, #footerAccueil p{
+    color: #C5BFC1;
+}
+#mainAccueil section:first-of-type{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+}
+h4{
+    font-size: 20px;
+}
+#mainAccueil section:first-of-type #blockImg{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#mainAccueil section:first-of-type div p {
+    text-align: left;
+    margin: 0;
+    width: 20vw;
+}
+#mainAccueil section:first-of-type div p span{
+    font-size: 20px;
+    color: white;
+    margin: 15px 0;
+}
+
+#mainAccueil section:first-of-type div h4{
+    display: flex;
+    margin: 0 0 30px;
+}
+#mainAccueil section:first-of-type #blockText{
+    margin: 25px 0;
+    display: flex;
+    width: 100%;
+}
+#mainAccueil section:first-of-type #blockText div{
+    display: flex;
+}   
+#mainAccueil section:first-of-type #blockText div div{
+    display: flex;
+    flex-direction: column;
+}
+
+#mainAccueil section:nth-of-type(2) img{
+    width: 40vw;
+    border-radius: 5px;
+}
+#mainAccueil section:nth-of-type(2) div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#mainAccueil section:nth-of-type(2) div article h5{
+    font-size: 2.5vw;
+    margin: 0;
+}
+#mainAccueil section:nth-of-type(2) div article p{
+    font-size: 1.5vw;
+    margin: 10px 0 0;
+    font-weight: bolder;
+}
+#mainAccueil section:nth-of-type(2) div article:first-of-type{
+    background-color: #3724A0;
+}
+
+
+#mainAccueil section:last-of-type{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+#mainAccueil section:last-of-type h2{
+    font-size: xx-large;
+    margin: 8rem 0 0 0;
+}
+#mainAccueil section:last-of-type p{
+    margin: 20px;
+}
+#mainAccueil section:last-of-type p+img{
+    width: 180px;
+    margin: 10px;
+}
+
+#mainAccueil section:last-of-type article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0E0B26;
+    padding: 30px;
+    margin: 10px;
+}
+.imgTeam{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+#mainAccueil section:last-of-type article div:not(.imgTeam){
+    display: flex;
+    justify-content: space-evenly;
+}
+#mainAccueil section:last-of-type article div img{
+    width: 20px;
+    margin: 5px;
+}
+#mainAccueil section:last-of-type article h6{
+    font-size: large;
+    margin: 20px 7rem 5px;
+}
+#mainAccueil section:last-of-type article h6+p{
+    color: #C5BFC1;
+}
+#alexis{
+    background: url(../images/alexis.jpg) center;
+    background-size: cover;
+}
+#mathias{
+    background: url(../images/mathias.JPG) center;
+    background-size: cover;
+
+}
+
+#mainContact{
+    display: flex;
+    width: 75%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}
+#leo{
+    background: url(../images/gento.jpg) center;
+    background-size: cover;
+}
+
+
+/*transition du header dan sle bon endroit*/
+
+#logo{
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    margin: 20px;
+}
+body{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #110E2E;
+}
+#facebook{
+    padding: 5px 7px 5px 3px;
+}
+#pinterest{
+    height: 25px;
+    width: 25px;
+    padding: 2.5px;
+}
+#playButton{
+    margin: 15px auto 10rem;
+    background-color: orange;
+    border: transparent;
+    padding: 15px;
+}
+.align{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.align div{
+    text-align: center;
+    padding: 40px 0;
+    margin: 10rem 0 3rem;
+    width: 32%;
+    background-color: #0E0B26;
+}
+#inputPetit{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.Submit{
+    background-color: #EC9123;
+    color: white;
+    border-radius: 2px;
+    border: transparent;
+    padding: 12px 30px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 50%;
+    margin: 0 auto 5rem 0;
+}
+#inputPetit input {
+    width: 45%;
+}
+.divInput{
+    margin: 50px;
+    text-align: left;
+    margin: 0 40%;
+}
+.pInput2{
+    margin: 10px;
+    text-align: center;
+}
+::placeholder{
+    color: lightgray;
+}
+.align .Submit{
+    background-color: #EC9123;
+    color: white;
+    border-color: #EC9123;
+    width: 15%;
+    margin: 10px auto 10px;
+}
+.align .SubmitEspace{
+    background-color: #EC9123;
+    color: white;
+    border-color: #EC9123;
+    width: 60%;
+    margin: 10px auto 10px;
+}
+.align form{
+    width: 50%;
+    color: white;
+}
+#doubleImgBlock{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.formEspace{
+    margin: 50px;
+    text-align: center;
+
+}
+.formEspace2{
+    margin: 50px;
+    text-align: center;
+
+}
+.pEspace{
+    margin: 3px;
+    margin-left: 50%;
+}
+
+.pEspace2{
+    margin: 3px;
+    margin-right: 50%;
+}
+::placeholder{
+    color: lightgray;
+}.Scores{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0%;
+    padding: 3% 0;
+}
+.Scores tr,.Scores img{
+    height: 100px;
+    width: 100px;
+    border: 1px solid #EC9123;
+    margin: 0;
+}
+.Scores tr td{
+    padding: 2px 4px;
+    cursor: pointer;
+}
+.Scores th{
+    border: 1px solid orange;
+    height: 25px;
+    width: 225px;
+}
+#blockArticle article:hover{
+    transition: 0.5s;
+    -ms-transform: scale(1.05); 
+    -webkit-transform: scale(1.05); 
+    transform: scale(1.05);
+}
+
+.container{
+    display: none;
+}
+
+#counter{
+    font-size: 3em;
+    letter-spacing: 3px;
+    margin: 3rem auto 0 auto;
+}
+
+.button{
+    width: 120px;
+    height: 40px;
+    background-color: #cecece;
+    margin:10px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border:1px solid #272727;
+    color: #272727;
+}
+.button:hover{
+    background-color: #272727;
+    color: #cecece;
+}
+#made{
+    font-size: .7em;
+    margin-top: 80vh;
+    position: absolute;
+    color: #272727;
+}
+#made a{
+    text-decoration: none;
+    color: #272727;
+}
+#made a:hover{
+    color:#8B46E2;
+}
+.PageScores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+}
+.PageScores tr{
+    outline: 2px solid #EC9123;
+}
+
+.PageScores th, .PageScores td{
+    outline: 1px solid #EC9123;
+    padding: 10px;
+    text-align: center;
+}
+.PageScores .Fait{
+    height: 40px;
+    width: 200px;
+    font-size: 40px;
+}
+.PageScores .FaitBase{
+    height: 40px;
+    width: 200px;
+}
+.jauge {
+    width: 100%;
+    height: 30px;
+    background-color: #ccc;
+    position: relative;
+    border-radius: 10px;
+}
+.arrowBack{
+    width: 50px;
+    filter: invert(1);
+    transform: rotateY(180deg);
+    margin: 0 30px 0;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    margin-top: 3.5px;
+}
+.arrowBack2{
+    width: 50px;
+    filter: invert(1);
+    transform: rotateY(180deg);
+    margin: 0 30px 0;
+    cursor: pointer;
+    position: absolute;
+}
+.remplissage {
+    height: 100%;
+    background-color: #EC9123;
+    width: 33%;
+    color: #373367;
+    text-align: right;
+    padding: 1rm;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.progression{
+    width: 400px;
+    margin: 10px;
+}
+.alignProfil{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.TableauProfil{
+    text-align: center;
+    width: 100%;
+    margin: 10%;
+}
+.levelDifficult h3, .themeChoice h3{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 0;
+    width: 100%;
+}
+.formEspace div input{
+    background-color: #373367;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    margin: 7px 0;
+    border: none;
+}
+.formEspace div input.SubmitEspace{
+    background-color: #EC9123;
+    color: white;
+    border-color: #EC9123;
+    margin: 10px auto 10px;
+}
+
+.pInput input{
+    background-color: #373367;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    margin: 7px 0;
+    border: none;
+    width: 100%;
+}
+.pInput input.Submit{
+    background-color: #EC9123;
+    color: white;
+    border-color: #EC9123;
+    margin: 10px auto 10px;
+    width: 50%;
+    cursor: pointer;
+}
+/*chat*/
+#imageApi{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.flexChat{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+#pos_chat{
+    position: absolute;
+}.toggle-checkbox {
+    display: none;
+}
+.floating-button {
+    width: 60px;
+    height: 60px;
+    background-color: dodgerblue;
+    position: fixed;
+    bottom: 10px; right: 10px;
+    border-radius: 50%;
+    background-image: url("../images/chaticones.png");
+    background-position: center;
+    background-size: 80%;
+    cursor: pointer;
+}
+.icone {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.floating-button:hover{
+    width: 70px;
+    height: 70px;
+    bottom: 5px; right: 5px;
+}
+.toggle-checkbox:checked ~ .floating-button{
+    background-color: dodgerblue;
+    background-image: url("../images/checkedchaticone.png");
+}
+#chat{
+    background-color: white;
+    height: 400px;
+    width: 350px;
+    position: fixed;
+    bottom: 80px; right: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: none;
+}
+.toggle-checkbox:checked ~ #chat{
+    display: flex;
+}
+.flexBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#chat #head{
+    display: flex;
+    background-color:dodgerblue;
+    align-items: center;
+    padding: 0;
+}
+#chat #head img{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+audio{
+    position: fixed;
+    bottom: 0;
+}
+#messages{
+    flex: 1;
+    padding: 20px 10px;
+    color: darkgray;
+    font-size: 10px;
+    overflow: scroll;
+}
+.column{
+    flex-direction: column;
+    margin-left: 5px;
+}
+.column p{
+    height: fit-content;
+    margin: 0;
+}
+.flex{
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+.message{
+    background-color: lightgray;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+}
+.user{
+    margin-left: auto;
+}
+.usersmessage{
+    background-color: dodgerblue;
+    color: white;
+}
+#mainAccount {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+}
+#mainAccount form{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+audio{
+    visibility: hidden;
+}
+#mainAccount section{
+    text-align: center;
+    margin: 0 0 0 auto;
+}
+#mainAccount section img{
+    width: 200px;
+}
+#mainAccount form fieldset{
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    padding: 0;
+    margin: 30px;
+}
+.row{
+    flex-direction: row;
+}
+#mainAccount form fieldset input{
+    margin: 5px;
+    border: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    background-color: #373367;
+}
+#mainAccount form fieldset input[type=submit]{
+    background-color: #EC9123;
+    color: white;
+    cursor: pointer;
+}
+#input form{
+    display: flex;
+    margin: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#messageInput{
+    flex: 1;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-width: 1px;
+    border-color: lightgray;
+    margin: 0;
+    border-radius: 5px;
+}
+#sendButton{
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+#sendButton:hover{
+    background-color: dodgerblue;
+    color: white;
+}
+.upButton a{
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+.upButton{
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 140, 0, 0.3);
+    background-image: url(../images/up-arrow.png);
+    background-position: center;
+    background-size: 80%;
+    position: fixed;
+    cursor: pointer;
+    border: 0;
+    bottom: 15Px;
+    right: 10px;
+    border-radius: 5px;
+}
+#memory .upButton{
+    right: 80px;
+}
+.upButton:hover{
+    background-color: darkorange;
+}
+@media screen and (max-width: 900px) {
+    .hard.Scores img{
+        width: 90px;
+        height: 90px;
+    }
+    #mainAccount {
+        flex-direction: column;
+    }
+    #mainAccount section{
+        text-align: center;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 810px) {
+    .hard.Scores img{
+        width: 80px;
+        height: 80px;
+    }
+}
+@media screen and (max-width: 760px) {
+    .align{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .align div{
+        width: 100%;
+        margin: 3rem 0;
+    }
+}
+@media screen and (max-width: 730px) {
+    .hard.Scores img{
+        width: 72px;
+        height: 72px;
+    }
+}
+@media screen and (max-width: 670px) {
+    .hard.Scores img{
+        width: 65px;
+        height: 65px;
+    }
+    .medium.Scores img{
+        width: 90px;
+        height: 90px;
+    }
+}
+@media screen and (max-width: 610px) {
+    .hard.Scores img{
+        width: 60px;
+        height: 60px;
+    }
+    .medium.Scores img{
+        width: 81px;
+        height: 81px;
+    }
+}
+@media screen and (max-width: 570px) {
+    .hard.Scores img{
+        width: 57px;
+        height: 57px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .hard.Scores img{
+        width: 55px;
+        height: 55px;
+    }
+    .medium.Scores img{
+        width: 72px;
+        height: 72px;
+    }
+}
+@media screen and (max-width: 530px) {
+    .hard.Scores img{
+        width: 53px;
+        height: 53px;
+    }
+}
+@media screen and (max-width: 510px) {
+    .hard.Scores img{
+        width: 52px;
+        height: 52px;
+    }
+}
+
+
+
+#memory-game{
+    display: flex;
+    flex-wrap: wrap;
+    width: 448px;
+    height: 448px;
+}
+#memory-game2{
+    display: flex;
+    flex-wrap: wrap;
+    width: 672px;
+    height: 672px;
+}
+#memory-game3{
+    display: flex;
+    flex-wrap: wrap;
+    width: 896px;
+    height: 896px;
+}
+.memory-card {
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/DosDeCarte.png');
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+img.memory-carte{
+    width: 100px;
+    height: 100px;
+}
+.flipped {
+    transform: rotateY(360deg);
+    transition: transform 1.5s;
+}
+.flipped2 {
+    transform: rotateY(-360deg);
+    transition: transform 1.5s;
+}
+
+
+.ScoresAccount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+}
+.ScoresAccount tr{
+    outline: 2px solid #EC9123;
+}
+
+.ScoresAccount th, .ScoresAccount td{
+    outline: 1px solid #EC9123;
+    padding: 10px;
+    text-align: center;
+}
+.ScoresAccount .Fait{
+    height: 40px;
+    width: 200px;
+    font-size: 40px;
+}
+.ScoresAccount .FaitBase{
+    height: 40px;
+    width: 200px;
+}
+.PseudoPageProfil{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.theme_btn3 {
+    margin-bottom: 30px;
 }

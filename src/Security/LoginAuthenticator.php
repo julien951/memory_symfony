@@ -53,7 +53,7 @@ class LoginAuthenticator extends AbstractLoginFormAuthenticator
     }
 
     // Sinon, rediriger l'utilisateur classique
-    return new RedirectResponse($this->urlGenerator->generate('app_lucky_number')); // Exemple : redirection vers la page lucky/number
+    return new RedirectResponse($this->urlGenerator->generate('app_game')); // Exemple : redirection vers la page lucky/number
 }
 
 

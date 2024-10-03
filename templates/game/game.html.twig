@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1> {{ theme.name }} </h1>
+        
+    {% for card in theme.cards %}
+        <div class="card-flip" style="width: 18rem;">
+            <div class="inner-card"> 
+                <div class="front"> 
+                    <img class="card-img-top" src="{{ card.url }}" alt="Card image cap">
+                </div> 
+                <div class="back">
+                    
+                </div> 
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
